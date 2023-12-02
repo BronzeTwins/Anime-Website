@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Cards</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/sweetalert.css" />
+    <link
+      rel="font/tff"
+      href="./fonts/Advent_Pro/AdventPro-VariableFont_wdth,wght.ttf"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="flex">
+      <div id="container">
+        <ul id="menu">
+          <li>
+            <a href="#">Menu</a>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="animequotes.html">Anime Quotes</a></li>
+              <li><a href="animecards.html">Anime Cards</a></li>
+              <li><a href="aboutus.html">About</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="cloud-container" onmouseover="rain()">
+        <div class="cloud">
+          <div class="anime-title">Twins Anime</div>
+        </div>
+      </div>
+    </nav>
+    <div class="main-container flex flex-direction">
+      <div class="anime-cards-title">
+        <h1>Anime Cards</h1>
+        <i class="fa fa-search"></i>
+        <input
+          type="text"
+          id="anime_Search"
+          onkeyup="animeSearch()"
+          placeholder="Search for anime..."
+        />
+      </div>
+      <div class="container">
+        <div
+          class="card flex"
+          onclick="PlaySound('fairytail-song')"
+          onmouseleave="StopSound('fairytail-song')"
+        >
+          <h1>Fairy Tail</h1>
+          <div class="content">
+            <audio id="fairytail-song">
+              <source src="./audio/fairy_tail.mp3" />
+              <source src="./audio/fairy_tail.ogg" />
+            </audio>
+            <img src="./images/fairytail.png" alt="Fairy Tail" />
+            <p>
+              The world of Earth-land is home to numerous guilds where wizards
+              apply their magic for paid job requests...
+            </p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Fairy_Tail"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('onepiece-song')"
+          onmouseleave="StopSound('onepiece-song')"
+        >
+          <h1>One Piece</h1>
+          <div class="content">
+            <img src="./images/onepiece.png" alt="One Piece" />
+            <audio id="onepiece-song">
+              <source src="./audio/one_piece.mp3" />
+              <source src="./audio/one_piece.ogg" />
+            </audio>
+            <p>
+              The series focuses on Monkey D. Luffy a young man made of rubber
+              after unintentionally eating a Devil Fruit...
+            </p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/One_Piece"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('bleach-song')"
+          onmouseleave="StopSound('bleach-song')"
+        >
+          <h1>Bleach</h1>
+          <div class="content">
+            <img src="./images/bleach.png" alt="Bleach" />
+            <audio id="bleach-song">
+              <source src="./audio/bleach.mp3" />
+              <source src="./audio/bleach.ogg" />
+            </audio>
+            <p>
+              In Karakura Town, high school student Ichigo Kurosaki becomes a
+              substitute Soul Reaper...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Bleach_(TV_series)"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('demon-slayer-song')"
+          onmouseleave="StopSound('demon-slayer-song')"
+        >
+          <h1>Demon Slayer</h1>
+
+          <div class="content">
+            <img src="./images/demonslayer.png" alt="Demon Slayer" />
+            <audio id="demon-slayer-song">
+              <source src="./audio/demon_slayer.mp3" />
+              <source src="./audio/demon_slayer.ogg" />
+            </audio>
+            <p>
+              Tanjiro Kamado is a kind-hearted and intelligent boy who lives
+              with his family in the mountains. After his father's death...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('hunter-x-hunter-song')"
+          onmouseleave="StopSound('hunter-x-hunter-song')"
+        >
+          <h1>Hunter x Hunter</h1>
+          <div class="content">
+            <img src="./images/hunterxhunter.png" alt="Hunter x Hunter" />
+            <audio id="hunter-x-hunter-song">
+              <source src="./audio/hunter_x_hunter.mp3" />
+              <source src="./audio/hunter_x_hunter.ogg" />
+            </audio>
+            <p>
+              The story follows a young boy named Gon Freecss, who was told all
+              his life that both his parents were dead...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Hunter_%C3%97_Hunter"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('pokemon-song')"
+          onmouseleave="StopSound('pokemon-song')"
+        >
+          <h1>Pokemon</h1>
+          <div class="content">
+            <img src="./images/pokemon.jpg" alt="Pokemon" />
+            <audio id="pokemon-song">
+              <source src="./audio/pokemon.mp3" />
+              <source src="./audio/pokemon.ogg" />
+            </audio>
+            <p>
+              The Pokémon franchise is set in a world in which humans coexist
+              with creatures known as Pokémon...
+            </p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Pok%C3%A9mon"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('black-clover-song')"
+          onmouseleave="StopSound('black-clover-song')"
+        >
+          <h1>Black Clover</h1>
+          <div class="content">
+            <img src="./images/blackclover.png" alt="Black Clover" />
+            <audio id="black-clover-song">
+              <source src="./audio/black_clover.mp3" />
+              <source src="./audio/black_clover.ogg" />
+            </audio>
+            <p>
+              The series focuses on Asta, a young orphan who is left to be
+              raised in an orphanage alongside his fellow orphan, Yuno...
+            </p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Black_Clover"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('sword-art-online-song')"
+          onmouseleave="StopSound('sword-art-online-song')"
+        >
+          <h1>Sword Art Online</h1>
+          <div class="content">
+            <img src="./images/swordartonline.jpg" alt="Sword Art Online" />
+            <audio id="sword-art-online-song">
+              <source src="./audio/sword_art_online.mp3" />
+              <source src="./audio/sword_art_online.ogg" />
+            </audio>
+            <p>
+              In 2022, a virtual reality massively multiplayer online
+              role-playing game (VRMMORPG) called Sword Art Online (SAO)...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Sword_Art_Online"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('attack-on-titans-song')"
+          onmouseleave="StopSound('attack-on-titans-song')"
+        >
+          <h1>Attack On Titans</h1>
+          <div class="content">
+            <img src="./images/attackontitans.jpg" alt="AOT" />
+            <audio id="attack-on-titans-song">
+              <source src="./audio/attack_on_titans.mp3" />
+              <source src="./audio/attack_on_titans.ogg" />
+            </audio>
+            <p>
+              Eren Yeager is a boy who lives in the town of Shiganshina, located
+              on the outermost of three...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Attack_on_Titan"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('overlord-song')"
+          onmouseleave="StopSound('overlord-song')"
+        >
+          <h1>Overlord</h1>
+          <div class="content">
+            <img src="./images/overlord.jpg" alt="Overlord" />
+            <audio id="overlord-song">
+              <source src="./audio/overlord.mp3" />
+              <source src="./audio/overlord.ogg" />
+            </audio>
+            <p>
+              In 2126, a Full-Dive Massively multiplayer online role-playing
+              game or DMMORPG called YGGDRASIL...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Overlord_(novel_series)"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('my-hero-academia-song')"
+          onmouseleave="StopSound('my-hero-academia-song')"
+        >
+          <h1>My Hero Academia</h1>
+          <div class="content">
+            <img src="./images/myheroacademia.jpg" alt="My Hero Academia" />
+            <audio id="my-hero-academia-song">
+              <source src="./audio/my_hero_academia.mp3" />
+              <source src="./audio/my_hero_academia.ogg" />
+            </audio>
+            <p>
+              Izuku Midoriya is a young man who dreams of becoming a Hero
+              despite being bullied by his childhood...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/My_Hero_Academia"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('one-punch-man-song')"
+          onmouseleave="StopSound('one-punch-man-song')"
+        >
+          <h1>One Punch Man</h1>
+          <div class="content">
+            <img src="./images/onepunchman.jpg" alt="One Punch Man" />
+            <audio id="one-punch-man-song">
+              <source src="./audio/one_punch_man.mp3" />
+              <source src="./audio/one_punch_man.ogg" />
+            </audio>
+            <p>
+              On a supercontinent version of Earth that has four Moons, powerful
+              monsters and supervillains wreak havoc...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/One-Punch_Man"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('naruto-song')"
+          onmouseleave="StopSound('naruto-song')"
+        >
+          <h1>Naruto</h1>
+          <div class="content">
+            <img src="./images/naruto.png" alt="Naruto" />
+            <audio id="naruto-song">
+              <source src="./audio/naruto.mp3" />
+              <source src="./audio/naruto.ogg" />
+            </audio>
+            <p>
+              A powerful fox known as the Nine-Tails attacks Konoha, the hidden
+              leaf village in the Land of Fire...
+            </p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Naruto"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('dragon-ball-z-song')"
+          onmouseleave="StopSound('dragon-ball-z-song')"
+        >
+          <h1>Dragon Ball Z</h1>
+          <div class="content">
+            <img src="./images/dragonballz.jpg" alt="Dragon Ball Z" />
+            <audio id="dragon-ball-z-song">
+              <source src="./audio/dragon_ball_z.mp3" />
+              <source src="./audio/dragon_ball_z.ogg" />
+            </audio>
+            <p>
+              Dragon Ball Z continues the adventures of Son Goku in his adult
+              life as he and his companions defend the Earth against villains...
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Dragon_Ball_Z"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('haikyuu-song')"
+          onmouseleave="StopSound('haikyuu-song')"
+        >
+          <h1>Haikyuu</h1>
+          <div class="content">
+            <img src="./images/haikyuu.jpg" alt="Haikyuu" />
+            <audio id="haikyuu-song">
+              <source src="./audio/haikyuu.mp3" />
+              <source src="./audio/haikyuu.ogg" />
+            </audio>
+            <p>
+              Junior high school student, Shoyo Hinata, becomes obsessed with
+              volleyball after catching a glimpse of Karasuno High School...
+            </p>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Haikyu!!"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <div
+          class="card flex"
+          onclick="PlaySound('kuroko-no-basuke-song')"
+          onmouseleave="StopSound('kuroko-no-basuke-song')"
+        >
+          <h1>Kuroko No Basuke</h1>
+          <div class="content">
+            <img src="./images/kurokonobasuke.png" alt="Kuroko No Basuke" />
+            <audio id="kuroko-no-basuke-song">
+              <source src="./audio/kuroko_no_basuke.mp3" />
+              <source src="./audio/kuroko_no_basuke.ogg" />
+            </audio>
+            <p>
+              The Teiko Middle School basketball team dominated basketball teams
+              within Japan, winning the middle school Nationals....
+            </p>
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Kuroko%27s_Basketball"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/sweetalert.js"></script>
+    <script type="text/javascript" src="./scripts/vanilla-tilt.js"></script>
+    <script type="text/javascript" src="./scripts/anime.js"></script>
+    <script type="text/javascript" src="./scripts/cloud.js"></script>
+  </body>
+</html>

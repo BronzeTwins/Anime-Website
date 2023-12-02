@@ -1,0 +1,235 @@
+.title-container {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.title-container span {
+  position: relative;
+  transition: all 1s ease-in-out;
+  font-size: 5rem;
+  color: white;
+}
+
+.title-container:hover > span {
+  cursor: pointer;
+  animation: bounce 0.5s ease-in-out alternate infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+.home-cards {
+  width: 100%;
+  height: 80vh;
+  border-radius: 4px;
+  background: transparent;
+  display: flex;
+  gap: 5px;
+  padding: 0.4em;
+}
+
+.home-cards span {
+  height: 100%;
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  color: white;
+  background: #404040;
+  width: 150px;
+  border: 5px double #404040;
+  font-size: 1.2em;
+  padding: 20px;
+  cursor: default;
+  left: 80%;
+  top: 80%;
+}
+.home-cards span:hover {
+  flex: 4;
+}
+.home-cards span:hover .tooltip {
+  visibility: visible;
+}
+
+.home-cards span img {
+  min-width: 14em;
+  padding: 0.5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.home-cards span:hover img {
+  transform: rotate(0);
+}
+
+/* menu css */
+
+#container {
+  position: relative;
+  top: -50px;
+  left: 40px;
+  width: 100%;
+  z-index: 2;
+}
+#menu {
+  position: relative;
+}
+
+#menu,
+#menu ul {
+  list-style: none;
+}
+
+#menu > li {
+  float: left;
+  position: relative;
+  perspective: 1000px;
+}
+
+#menu a {
+  display: block;
+  position: relative;
+  z-index: 10;
+  padding: 13px 20px 13px 20px;
+  text-decoration: none;
+  color: white;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  background: transparent;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+  transition: all 0.25s ease-in-out;
+}
+
+#menu > li:hover > a {
+  background: #333;
+  color: rgba(0, 223, 252, 1);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-shadow: none;
+}
+
+#menu li ul {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 200px;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background: transparent;
+  overflow: hidden;
+  transform-origin: 50% 0%;
+}
+
+#menu li:hover ul {
+  padding: 15px 0;
+  background: #333;
+  opacity: 1;
+  visibility: visible;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+  animation-name: swingdown;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes swingdown {
+  0% {
+    opacity: 0.99999;
+    transform: rotateX(90deg);
+  }
+
+  30% {
+    transform: rotateX(-20deg) rotateY(5deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  65% {
+    transform: rotateX(20deg) rotateY(-3deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: rotateX(0);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+#menu li li a {
+  padding-left: 15px;
+  font-weight: 400;
+  color: #ddd;
+  text-shadow: none;
+  border-top: dotted 1px transparent;
+  border-bottom: dotted 1px transparent;
+  transition: all 0.15s linear;
+}
+
+#menu li li a:hover {
+  color: rgba(0, 223, 252, 1);
+  border-top: dotted 1px rgba(255, 255, 255, 0.15);
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.15);
+  background: rgba(0, 223, 252, 0.02);
+}
+
+@keyframes bounce {
+  100% {
+    transform: translateY(4rem);
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+}
+
+@media (min-width: 400px) {
+  /* .home-cards {
+    flex-direction: column;
+  } */
+  .tooltip {
+    font-size: 0.6em;
+    padding: 5px;
+    top: 60%;
+    left: 70%;
+  }
+}
+@media (min-width: 700px) {
+  /* .home-cards {
+    flex-direction: row;
+  } */
+  .tooltip {
+    font-size: 0.9em;
+    padding: 10px;
+    top: 75%;
+    left: 70%;
+  }
+}
+@media (min-width: 1000px) {
+  .tooltip {
+    left: 80%;
+    top: 80%;
+  }
+}

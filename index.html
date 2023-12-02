@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime World</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <!-- <link rel="stylesheet" href="./styles/sweetalert.css" /> -->
+    <link
+      rel="font/tff"
+      href="./fonts/Advent_Pro/AdventPro-VariableFont_wdth,wght.ttf"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/ninja-naruto" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- <nav class="flex">
+      <div class="navbar">
+        <div class="nav-container flex">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <div class="menu-items flex">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animequotes.html">Anime Quotes</a></li>
+            <li><a href="animecards.html">Anime Cards</a></li>
+            <li><a href="aboutus.html">About</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="cloud-container" onmouseover="rain()">
+        <div class="cloud">
+          <div class="anime-title">Twins Anime</div>
+        </div>
+      </div>
+    </nav> -->
+    <nav class="flex">
+      <div id="container">
+        <ul id="menu">
+          <li>
+            <a href="#">Menu</a>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="animequotes.html">Anime Quotes</a></li>
+              <li><a href="animecards.html">Anime Cards</a></li>
+              <li><a href="aboutus.html">About</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="cloud-container" onmouseover="rain()">
+        <div class="cloud">
+          <div class="anime-title">Twins Anime</div>
+        </div>
+      </div>
+    </nav>
+    <div class="main-container flex flex-direction">
+      <div class="title-container flex" onmouseover="randomTitleColor()">
+        <span style="--i: 1">W</span>
+        <span style="--i: 2">e</span>
+        <span style="--i: 3">l</span>
+        <span style="--i: 4">c</span>
+        <span style="--i: 5">o</span>
+        <span style="--i: 6">m</span>
+        <span style="--i: 7">e</span>
+        <span>&nbsp;</span>
+        <span style="--i: 8">T</span>
+        <span style="--i: 9">o</span>
+        <span>&nbsp;</span>
+        <span style="--i: 10">A</span>
+        <span style="--i: 11">n</span>
+        <span style="--i: 12">i</span>
+        <span style="--i: 13">m</span>
+        <span style="--i: 14">e</span>
+        <span>&nbsp;</span>
+        <span style="--i: 15">W</span>
+        <span style="--i: 16">o</span>
+        <span style="--i: 17">r</span>
+        <span style="--i: 18">l</span>
+        <span style="--i: 19">d</span>
+        <span style="--i: 20">!</span>
+      </div>
+      <div class="home-cards">
+        <span
+          ><img src="./images/natsu_big5.jpg" alt="Natsu" /><em class="tooltip"
+            >Natsu Dragneel</em
+          ></span
+        >
+        <span
+          ><img src="./images/luffy_big5.jpg" alt="Luffy" /><em class="tooltip"
+            >Monkey D. Luffy</em
+          ></span
+        >
+        <span
+          ><img src="./images/goku_big5.jpg" alt="Goku" /><em class="tooltip"
+            >Son Goku</em
+          ></span
+        >
+        <span
+          ><img src="./images/naruto_big5.jpg" alt="Naruto" /><em
+            class="tooltip"
+            >Naruto Uzumaki</em
+          ></span
+        >
+        <span
+          ><img src="./images/ichigo_big5.jpg" alt="Ichigo" /><em
+            class="tooltip"
+            >Ichigo Kurosaki
+          </em></span
+        >
+      </div>
+    </div>
+    <script type="text/javascript" src="./scripts/cloud.js"></script>
+    <script type="text/javascript" src="./scripts/titlecolor.js"></script>
+  </body>
+</html>
