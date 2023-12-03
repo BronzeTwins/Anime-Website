@@ -216,7 +216,7 @@
     flex-direction: row;
   } */
   .tooltip {
-    font-size: 0.9em;
+    font-size: 0.7em;
     padding: 10px;
     top: 60%;
     left: 50%;
@@ -227,7 +227,7 @@
     flex-direction: column;
   } */
   .tooltip {
-    font-size: 0.6em;
+    font-size: 0.5em;
     padding: 5px;
     top: 70%;
     left: 60%;
